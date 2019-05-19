@@ -2,8 +2,10 @@
   "name": "movieInfo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kingztech2019.github.io/Kingz-movies-series-info",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-icons": "^2.2.5",
@@ -17,11 +19,10 @@
     "uuid": "^3.1.0"
   },
   "scripts": {
-    "start": "concurrently 'npm run react' 'npm run server'",
-    "react": "react-scripts start",
-    "server": "nodemon src/server/index.js",
+    "deploy": "npm run build&&gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -30,7 +31,7 @@
   },
   "browserslist": [
     ">0.2%",
-    "not dead",
+     
     "not ie <= 11",
     "not op_mini all"
   ]
